@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+  /* background-color: #FFC200; */
+}
+
+.App {
+  padding: 0px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  padding: 8px;
+}
+
+.user_icon {
+  width: 40px;
+  height: 40px;
+}
+
+.menu_icon {
+  width: 40px;
+  height: 40px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  /* border: solid black 1px; */
+  align-items: center;
+}
+
+.logo {
+  width: 70%;
+}
+
+h4 {
+  text-align: center;
+  padding: 16px;
+}
+
+.browser {
+  display: flex;
+  flex-direction: column;
+  /* border: solid black 1px; */
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.browser_icon {
+  width: 104px;
+}
+
+.prompt_buttons {
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+}
+
+.prompt1, .prompt2 {
+  width: 50%;
+  height: 54px;
+  background-color: #ffffff;
+  border-style: none;
+  border: solid black 1px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  border: solid black 1px;
+  align-items: center;
+}
+
+.home_icon {
+  padding-top: 24px;
+  width: 40px;
+}
