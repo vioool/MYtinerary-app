@@ -3,13 +3,17 @@ const Schema = mongoose.Schema;
 
 //create city Schema & model
 const CitySchema = new Schema({
+    name: {
+        type: String,
+        required: true
+    },
     country: {
         type: String,
         required: [true, 'Country field is required']
     },
-    city: {
+    img: {
         type: String,
-        required: [true, 'City field is required']
+        required: true
     },
     available: {
         type: Boolean,
