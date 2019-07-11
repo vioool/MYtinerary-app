@@ -1,0 +1,5 @@
+export const GET_CITIES = 'GET_CITIES'
+export const CREATE_CITY = 'CREATE_CITY'
+export const CREATE_CITY_ERROR = 'CREATE_CITY_ERROR'
+export const SET_ERROR = 'SET_ERROR'
+export const REMOVE_ERROR = 'REMOVE_ERROR'

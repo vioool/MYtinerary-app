@@ -1,12 +1,15 @@
-import React from 'react'
+import React, { Component } from "react";
 
-const MYtinerary = () => {
-    return (
-        <div className="container">
-            <h4 className="center">MYtinerary</h4>
-            <p>Something to tell to the user</p>
-        </div>
-    )
+import AddTinerary from '../AddTinerary';
+
+class MYtinerary extends Component {
+    render() { //Virtual DOM
+        return (
+            <div className="MYtinerary">
+                <AddTinerary />
+            </div>
+        );
+    }
 }
 
-export default MYtinerary
+export default MYtinerary;

@@ -10,13 +10,15 @@ const app = express();
 mongoose.connect('mongodb://localhost/citygo');
 mongoose.Promise = global.Promise;
 
+app.unsubscribe(express.static('public'));
+
 app.use(bodyParser.json());
 
 // initialize routes
-app.use('/api', require('./routes/api'));
+app.use('/cities', require('./routes/cities'));
 
 //error handling middleware
-app.use(function(err, req, res, next){
+app.use(function(err, req, res){
 // console.log(err);
 res.status(422).send({error: err.message});
 });

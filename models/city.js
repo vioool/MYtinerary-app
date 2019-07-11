@@ -14,14 +14,8 @@ const CitySchema = new Schema({
     img: {
         type: String,
         required: true
-    },
-    available: {
-        type: Boolean,
-        default: false
     }
     //add in geo location
 });
 
-const City = mongoose.model('city', CitySchema);
-
-module.exports = City;
+module.exports = City = mongoose.model('city', CitySchema)
