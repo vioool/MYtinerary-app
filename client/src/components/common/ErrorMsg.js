@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 export const ErrorMsg = ({errors}) => {
     console.log(errors)
@@ -19,8 +18,4 @@ export const ErrorMsg = ({errors}) => {
     }
     return null;    
 }
-const mapStateToProps = state => ({ 
-    errors: state.err 
-  }) 
-export default connect(mapStateToProps)(ErrorMsg) 
 

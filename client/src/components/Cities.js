@@ -20,7 +20,7 @@ class Cities extends Component {
                     key={_id} 
                     name={name} 
                     _id={_id} 
-                    /* img={img}  */
+                    img={img}
                     />
                 )
             })

@@ -80,6 +80,33 @@ footer {
   width: 40px;
 }
 
+
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 24px;
+}
+
+.card-title {
+  font-family: 'DM Serif Display', serif;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 96px;
+}
+
+.fas {
+  padding: 12px;
+  border-radius: 24px;
+  border: 1px solid #ff1744;
+  color: #ff1744;
+}
+
  /* label focus color */
 .input-field input[type=text]:focus + label {
     color: #ff1744;

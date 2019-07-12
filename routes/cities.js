@@ -67,6 +67,7 @@ router.post('/', cityValidation, async (req, res) => {
 
     //delete a city from the db
     router.delete('/:id', async (req, res) => {
+        console.log('hello');
         try {
             const city = await City.findByIdAndDelete(req.params.id)
             if (!city) {
@@ -75,6 +76,7 @@ router.post('/', cityValidation, async (req, res) => {
             }
             res.send({ msg: 'City deleted.' })
         } catch (err) {
+            console.log('hello');
             res.status(500)
                 .send(err.message)
         }

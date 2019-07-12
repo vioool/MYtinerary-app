@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { getCities, createCity } from '../../store/actions/cityActions';
 import { setError } from '../../store/actions/errorActions';
 import { ErrorMsg } from '../common/ErrorMsg';
-import { CityCreatorCard } from './CityCreatorCard';
+import CityCreatorCard from './CityCreatorCard';
 //connect our component to our redux store
 import { connect } from 'react-redux'
 

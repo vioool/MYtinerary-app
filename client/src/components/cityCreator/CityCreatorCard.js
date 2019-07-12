@@ -1,44 +1,23 @@
-import React from 'react';
-//1. we connect our component to the store
-// import { connect } from 'react-redux'
+import { deleteCity, getCity } from '../../store/actions/cityActions';
+import React from 'react'
+import { connect } from 'react-redux'
 
-
-const readCityId = (id) => {
-    fetch("/cities/"+id, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    }).then(r => r.json()).then(data => console.log(data))
+const CityCreatorCard = ({ name, _id, deleteCity, getCity }) => {
+  return (
+    <div className="card">
+      <span className="card-title activator grey-text text-darken-4">{name}</span>
+      <div className="icons">
+        <i
+          onClick={() => deleteCity(_id)}
+          className="fas fa-trash-alt">
+        </i>
+        <i
+          onClick={() => getCity(_id)}
+          className="fas fa-pencil-alt">
+        </i>
+      </div>
+    </div>
+  )
 }
 
-export const CityCreatorCard = ({_id, name, img}) => {   
-    // render() {
-        // let cityList;
-        // const { cities } = this.props;
-        // if (cities) {
-        //     cityList = cities.map(city => {
-                return (
-                    <div 
-                        key={_id}
-                        onClick={() =>readCityId(_id)}
-                    >
-                    <img
-            src={img}
-            alt='city image'/>
-                        <p>{name}</p>
-                    </div> 
-                )
-        //     })
-        // }
-    // }
-
-}
-
-   
-
-
-// const mapStateToProps = state => ({ 
-//     cities: state.cities.cities,
-//   }) 
-// export default connect(mapStateToProps)(CityCreatorCard) 
+export default connect(null, { deleteCity, getCity })(CityCreatorCard)

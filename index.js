@@ -20,6 +20,7 @@ app.use('/cities', require('./routes/cities'));
 //error handling middleware
 app.use(function(err, req, res){
 // console.log(err);
+// console.log('hello',  err.message)
 res.status(422).send({error: err.message});
 });
 

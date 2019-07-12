@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { getCities } from '../store/actions/cityActions'
-import { CityCard } from './cities/CityCard'
+import CityCard from './cities/CityCard'
 import { connect } from 'react-redux'
 
 class Cities extends Component {
@@ -14,11 +14,14 @@ class Cities extends Component {
         let cityList
         const { cities } = this.props
         if (cities) {
-            cityList = cities.map(city => {
+            cityList = cities.map(({ name, img, _id }) => {
                 return (
-                    <div className="card-panel" key={city._id}>
-                        <p>{city.name}</p>
-                    </div>
+                    <CityCard 
+                    key={_id} 
+                    name={name} 
+                    _id={_id} 
+                    /* img={img}  */
+                    />
                 )
             })
             return (
