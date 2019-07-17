@@ -1,7 +1,7 @@
 import React from 'react'
-import user_icon from '../user_icon.png';
-import menu_icon from '../menu_icon.png';
-import home_icon from '../homeIcon.png';
+import user_icon from '../Images/user_icon.png';
+import menu_icon from '../Images/menu_icon.png';
+import home_icon from '../Images/homeIcon.png';
 
 const CreateAccount = () => {
     return (

@@ -1,17 +1,30 @@
 const mongoose = require('mongoose')
-const ItinerarySchema = new mongoose.Schema({
+const Schema = mongoose.Schema
 
-    name: {
+const ItinerarySchema = new Schema({
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+    },
+    title: {
         type: String,
         required: true
     },
-    country: {
+    city: {
         type: String,
         required: true
     },
     img: {
-        type: String,
-        required: true
+        type: String
+    },
+    published: {
+        type: Boolean,
+        default: false
+    },
+    date: {
+        type: Date,
+        default: Date.now
     }
+})
 
-      module.exports = City = mongoose.model('city', CitySchema)
+module.exports = Itinerary = mongoose.model('itinerary', ItinerarySchema)

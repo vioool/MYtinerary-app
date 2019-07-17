@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import user_icon from '../user_icon.png';
-import menu_icon from '../menu_icon.png';
-import home_icon from '../homeIcon.png';
-import logo from '../MYtineraryLogo.png';
-import browser_icon from '../circled-right-2.png';
+import user_icon from '../Images/user_icon.png';
+import menu_icon from '../Images/menu_icon.png';
+import home_icon from '../Images/homeIcon.png';
+import logo from '../Images/MYtineraryLogo.png';
+import browser_icon from '../Images/circled-right-2.png';
 
 
 const Home = () => {

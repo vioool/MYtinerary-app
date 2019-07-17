@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import { getCities, createCity } from '../../store/actions/cityActions';
+import { getItineraries, createItinerary } from '../../store/actions/itineraryActions'
 import { setError } from '../../store/actions/errorActions';
 import { ErrorMsg } from '../common/ErrorMsg';
-import CityCreatorCard from './CityCreatorCard';
+import ItineraryCreatorCard from './ItineraryCreatorCard';
 //connect our component to our redux store
 import { connect } from 'react-redux'
 
-class CityCreator extends Component {
+class CreateItinerary extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            country: '',
+            title: '',
+            city: '',
             img: ''
         }
         this.onChange = this.onChange.bind(this)
@@ -19,54 +19,55 @@ class CityCreator extends Component {
     }
 
     componentDidMount() {
-        this.props.getCities()
+        this.props.getItineraries()
     }
 
+    //computed property names: computes name of property based on its value!
     onChange(e) {
-        this.setState({
+                this.setState({
             [e.target.name]: e.target.value
         })
     }
+
     onSubmit(e) {
         e.preventDefault()
         const formData = {
-            name: this.state.name,
-            country: this.state.country,
+            title: this.state.title,
+            city: this.state.city,
             img: this.state.img
         }
-        this.props.createCity(formData)
+        this.props.createItinerary(formData)
         this.setState({
-            name: "",
-            country: "",
+            title: "",
+            city: "",
             img: ""
-        });
+          });
     }
 
-
     render() {
-        const { cities } = this.props
+        const { itineraries } = this.props
         const { errors } = this.props
         return (
             <div id="index">
                 {console.log(this.props)}
-                {console.log(this.props.cities)}
+                {console.log(this.props.itineraries)}
                 {/* {console.log('hello',this.props.error)} */}
                 <div className="errorMsg center red-text text-accent-3">
                     <ErrorMsg errors={errors} />
                 </div>
                 <form onSubmit={this.onSubmit}>
-                    <label>City Name</label>
+                    <label>Title</label>
                     <input
                         type='text'
-                        name='name'
-                        value={this.state.name}
+                        name='title'
+                        value={this.state.title}
                         onChange={this.onChange}
                     />
-                    <label>Country Code</label>
+                    <label>City</label>
                     <input
                         type='text'
-                        name='country'
-                        value={this.state.country}
+                        name='city'
+                        value={this.state.city}
                         onChange={this.onChange}
                     />
                     <label>Image</label>
@@ -76,30 +77,23 @@ class CityCreator extends Component {
                         value={this.state.img}
                         onChange={this.onChange}
                     />
-                    <button className="btn waves-effect waves-light red accent-3" type="submit" name="action">Submit
-                        <i className="material-icons right">send</i>
+                    <button className="btn waves-effect waves-light red accent-3" type="submit" title="action">Submit
+                    <i className="material-icons right">send</i>
                     </button>
                 </form>
-
                 <div>
-                    {cities.map(({ name, img, _id }) => {
-                        return <CityCreatorCard
-                            key={_id}
-                            name={name}
-                            _id={_id}
-                            img={img}
-                        />
-                    })}
+                    {itineraries.map(({ title, img, _id }) => {
+                        return <ItineraryCreatorCard key={_id} title={title} _id={_id} img={img}
+                        /> })}
                 </div>
-
             </div>
         )
     }
 }
 //these are the reducers (combined in your rooteReducer/Index)
 const mapStateToProps = state => ({
-    cities: state.cities.cities,
+    itineraries: state.itineraries.itineraries,
     errors: state.error
 })
 
-export default connect(mapStateToProps, { getCities, createCity, setError })(CityCreator)
+export default connect(mapStateToProps, { getItineraries, createItinerary, setError })(CreateItinerary)
