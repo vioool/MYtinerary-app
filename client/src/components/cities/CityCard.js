@@ -5,8 +5,7 @@ import { connect } from 'react-redux'
 const CityCard = ({ name, img, getItineraries }) => {
   return (
     //onClick get Itineraries by City(name)
-    <div
-      className="card"
+    <div className="card"
       onClick={() => getItineraries(name)}>
       <img
         src={img}

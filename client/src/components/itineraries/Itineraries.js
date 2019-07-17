@@ -25,7 +25,7 @@ class Itineraries extends Component {
                 )
             })
             return (
-                <div className="container">
+                <div id="index">
                     {ItineraryList}
                 </div>
             )

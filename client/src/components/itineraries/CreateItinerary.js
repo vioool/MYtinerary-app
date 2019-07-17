@@ -55,7 +55,9 @@ class CreateItinerary extends Component {
                 <div className="errorMsg center red-text text-accent-3">
                     <ErrorMsg errors={errors} />
                 </div>
-                <form onSubmit={this.onSubmit}>
+                <div className="card">
+                    <h3>Create Itinerary</h3>
+                <form className="box" onSubmit={this.onSubmit}>
                     <label>Title</label>
                     <input
                         type='text'
@@ -81,6 +83,7 @@ class CreateItinerary extends Component {
                     <i className="material-icons right">send</i>
                     </button>
                 </form>
+                </div>
                 <div>
                     {itineraries.map(({ title, img, _id }) => {
                         return <ItineraryCreatorCard key={_id} title={title} _id={_id} img={img}

@@ -54,32 +54,35 @@ class CityCreator extends Component {
                 <div className="errorMsg center red-text text-accent-3">
                     <ErrorMsg errors={errors} />
                 </div>
-                <form onSubmit={this.onSubmit}>
-                    <label>City Name</label>
-                    <input
-                        type='text'
-                        name='name'
-                        value={this.state.name}
-                        onChange={this.onChange}
-                    />
-                    <label>Country Code</label>
-                    <input
-                        type='text'
-                        name='country'
-                        value={this.state.country}
-                        onChange={this.onChange}
-                    />
-                    <label>Image</label>
-                    <input
-                        type='text'
-                        name='img'
-                        value={this.state.img}
-                        onChange={this.onChange}
-                    />
-                    <button className="btn waves-effect waves-light red accent-3" type="submit" name="action">Submit
+                <div className="card">
+                    <h3>Create City</h3>
+                    <form className="box" onSubmit={this.onSubmit}>
+                        <label>City Name</label>
+                        <input
+                            type='text'
+                            name='name'
+                            value={this.state.name}
+                            onChange={this.onChange}
+                        />
+                        <label>Country Code</label>
+                        <input
+                            type='text'
+                            name='country'
+                            value={this.state.country}
+                            onChange={this.onChange}
+                        />
+                        <label>Image</label>
+                        <input
+                            type='text'
+                            name='img'
+                            value={this.state.img}
+                            onChange={this.onChange}
+                        />
+                        <button className="btn waves-effect waves-light red accent-3" type="submit" name="action">Submit
                         <i className="material-icons right">send</i>
-                    </button>
-                </form>
+                        </button>
+                    </form>
+                </div>
 
                 <div>
                     {cities.map(({ name, img, _id }) => {

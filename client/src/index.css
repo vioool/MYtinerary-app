@@ -52,6 +52,15 @@ body {
   padding-top: 16px;
 }
 
+h3 {
+  font-family: 'DM Serif Display', serif;
+  color: #ff1744;
+  margin: 0px !important;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+}
+
 h4 {
   text-align: center;
   padding: 16px;
@@ -85,7 +94,16 @@ footer {
   align-items: center;
 }
 
-.card {
+.btn {
+  display: flex;
+  width: 100%;
+}
+
+.box {
+  padding: 24px;
+}
+
+.complex {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,12 +113,24 @@ footer {
 
 .card-title {
   font-family: 'DM Serif Display', serif;
+  padding-right: 16px;
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.city-img {
+  width: 100%;
+}
+
+.itinerary-img {
+  width: 100%;
 }
 
 .icons {
   display: flex;
   justify-content: space-between;
-  width: 96px;
+  width: 118px;
+  padding-left: 16px;
 }
 
 .fas {
@@ -126,10 +156,10 @@ footer {
 
  /* label focus color */
 .input-field input[type=text]:focus + label {
-    color: #ff1744;
+    color: #ff1744 !important;
 }
 /* label underline focus color */
 .input-field input[type=text]:focus {
-  border-bottom: 1px solid #ff1744 ;
-  box-shadow: 0 1px 0 0 #000;
+  border-bottom: 1px solid #ff1744 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
 }

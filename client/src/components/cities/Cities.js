@@ -37,13 +37,13 @@ class Cities extends Component {
             <div id="index">
                 {console.log(this.props)}
                 <div className="searchbar">
-                <i className="fas fa-search"></i>
-                <input className='form-control'
-                    placeholder="Search City"
-                    type='text'
-                    value={this.state.search}
-                    onChange={this.updateSearch.bind(this)}
-                />
+                    <i className="fas fa-search"></i>
+                    <input className='form-control'
+                        placeholder="Search City"
+                        type='text'
+                        value={this.state.search}
+                        onChange={this.updateSearch.bind(this)}
+                    />
                 </div>
                 <ul>
                     {/* change cities.map into the new let filteredCities.map so we pass along the data to another variable */}
@@ -56,7 +56,7 @@ class Cities extends Component {
                     })}
 
                     {/* return (
-                <div className="container">
+                <div id="index">
                         {cityList}
                     </div>
                     )
