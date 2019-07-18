@@ -58,7 +58,7 @@ h3 {
   margin: 0px !important;
   padding: 24px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 h4 {
@@ -102,6 +102,11 @@ footer {
 .box {
   padding: 24px;
 }
+
+/* .citycard{
+  width: 50%;
+  margin: 16px;
+} */
 
 .complex {
   display: flex;

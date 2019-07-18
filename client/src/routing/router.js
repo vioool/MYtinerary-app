@@ -8,7 +8,8 @@ import MYtinerary from '../components/MYtinerary'
 import { Route, BrowserRouter } from 'react-router-dom'
 import CityCreator from '../components/cityCreator/CityCreator'
 import CreateItinerary from '../components/itineraries/CreateItinerary'
-import Itineraries from '../components/itineraries/Itineraries';
+import Itineraries from '../components/itineraries/Itineraries'
+import SignUpPage from '../components/signUp/SignUpPage'
 
 class Routing extends Component {
     render() {
@@ -23,6 +24,7 @@ class Routing extends Component {
                 <Route path='/mytinerary' component={MYtinerary} />
                 <Route exact path='/city-creator' component={CityCreator} />
                 <Route exact path='/creator-itinerary' component={CreateItinerary} />
+                <Route exact path='/signup' component={SignUpPage} />
             </BrowserRouter>
         );
     }

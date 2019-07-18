@@ -13,6 +13,7 @@ const Navbar = () => {
                     </li>
                     <li><Link to='/city-creator'>CityCrea</Link></li>
                     <li><NavLink to="/cities">Cities</NavLink></li>
+                    <li><NavLink to="/signup">SignUp</NavLink></li>
                     <li><NavLink to="/creator-itinerary">Creatin</NavLink></li>
                     {/* <li><NavLink to="/mytinerary">MYtin</NavLink></li>
                     <li><NavLink to="/login">Login</NavLink></li>

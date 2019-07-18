@@ -5,7 +5,7 @@ const ItineraryCard = ({ name, img }) => {
         <div className="card">
             <img
                 src={img}
-                alt={`${name} picture`}
+                alt=""
                 className="itinerary-img" />
             <span
                 className="card-title">{name}
