@@ -48,15 +48,13 @@ class CityCreator extends Component {
         const { errors } = this.props
         return (
             <div id="index">
-                {console.log(this.props)}
-                {console.log(this.props.cities)}
-                {/* {console.log('hello',this.props.error)} */}
                 <div className="errorMsg center red-text text-accent-3">
                     <ErrorMsg errors={errors} />
                 </div>
                 <div className="card">
-                    <h3>Create City</h3>
+                    <h3>Create New City</h3>
                     <form className="box" onSubmit={this.onSubmit}>
+
                         <label>City Name</label>
                         <input
                             type='text'
@@ -64,6 +62,7 @@ class CityCreator extends Component {
                             value={this.state.name}
                             onChange={this.onChange}
                         />
+
                         <label>Country Code</label>
                         <input
                             type='text'
@@ -71,6 +70,7 @@ class CityCreator extends Component {
                             value={this.state.country}
                             onChange={this.onChange}
                         />
+
                         <label>Image</label>
                         <input
                             type='text'
@@ -78,12 +78,16 @@ class CityCreator extends Component {
                             value={this.state.img}
                             onChange={this.onChange}
                         />
-                        <button className="btn waves-effect waves-light red accent-3" type="submit" name="action">Submit
+
+                        <button
+                            className="btn waves-effect waves-light red accent-3"
+                            type="submit"
+                            name="action">Submit
                         <i className="material-icons right">send</i>
                         </button>
+
                     </form>
                 </div>
-
                 <div>
                     {cities.map(({ name, img, _id }) => {
                         return <CityCreatorCard

@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 
-class SignUpForm extends Component {
+class LoginForm extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            username: '',
-            img: '',
             email: '',
-            password: '',
-            passwordConfirmation: ''
+            password: ''
         }
         this.onChange = this.onChange.bind(this)
         this.onSubmit = this.onSubmit.bind(this)
@@ -29,7 +26,7 @@ class SignUpForm extends Component {
         return (
             <div id="index">
                 <div className="card">
-                    <h3>Join our Comunity!</h3>
+                    <h3>Login</h3>
                     <form className="box" onSubmit={this.onSubmit}>
 
                         <div className="form-group">
@@ -37,31 +34,9 @@ class SignUpForm extends Component {
                                 <i className="fab fa-google-plus-g"></i>
                             </button>
                         </div>
-
+                        
                         <div>
                             <p>- or -</p>
-                        </div>
-
-                        <div className="form-group">
-                            <label className="control-label">Username</label>
-                            <input
-                                className="form-control"
-                                type="text"
-                                name="username"
-                                value={this.state.username}
-                                onChange={this.onChange}
-                            />
-                        </div>
-
-                        <div className="form-group">
-                            <label className="control-label">Profile Picture</label>
-                            <input
-                                className="form-control"
-                                type='text'
-                                name='img'
-                                value={this.state.img}
-                                onChange={this.onChange}
-                            />
                         </div>
 
                         <div className="form-group">
@@ -87,22 +62,12 @@ class SignUpForm extends Component {
                         </div>
 
                         <div className="form-group">
-                            <label className="control-label">Password Confirmation</label>
-                            <input
-                                className="form-control"
-                                type="password"
-                                name="passwordConfirmation"
-                                value={this.state.passwordConfirmation}
-                                onChange={this.onChange}
-                            />
-                        </div>
-
-                        <div className="form-group">
                             <button className="btn waves-effect waves-light red accent-3" type="submit" name="action">
-                                Sign Up
+                                Login
                             <i className="material-icons right">send</i>
                             </button>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -110,4 +75,4 @@ class SignUpForm extends Component {
     }
 }
 
-export default SignUpForm
+export default LoginForm

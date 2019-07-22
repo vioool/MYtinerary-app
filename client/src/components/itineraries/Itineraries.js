@@ -12,26 +12,17 @@ class Itineraries extends Component {
 
     render() {
         console.log(this.props);
-        let ItineraryList
         const { itineraries } = this.props
-        if (itineraries) {
-            console.log(this.props);
-            ItineraryList = itineraries.map(({ title, img }, index) => {
-                return (
-                    <ItineraryCard 
-                    name={title} 
-                    img={img} 
-                    key={index} />
-                )
-            })
-            return (
-                <div id="index">
-                    {ItineraryList}
-                </div>
-            )
-        } else {
-            ItineraryList = <p>Loading...</p>
-        }
+        return (
+            <div id="index">
+                {itineraries.map(({ title, img }, index) => {
+                    return <ItineraryCard
+                        name={title}
+                        img={img}
+                        key={index} />
+                })}
+            </div>
+        )
     }
 }
 

@@ -10,7 +10,13 @@ export const CREATE_ITINERARY_ERROR = 'CREATE_ITINERARY_ERROR'
 export const DELETE_ITINERARY = 'DELETE_ITINERARY'
 export const GET_ITINERARY = 'GET_ITINERARY'
 
+export const GET_USERS = 'GET_USERS'
+export const CREATE_USER = 'CREATE_USER'
+export const CREATE_USER_ERROR = 'CREATE_USER_ERROR'
+export const DELETE_USER = 'DELETE_USER'
+export const GET_USER = 'GET_USER'
+
 export const SET_ERROR = 'SET_ERROR'
 export const REMOVE_ERROR = 'REMOVE_ERROR'
 
-export const SEARCH = 'SEARCH'
+// export const SEARCH = 'SEARCH'

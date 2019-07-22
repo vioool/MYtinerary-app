@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// NOT IN USE???!!!
+
 class AddTinerary extends Component {
     state = {
         name: null,

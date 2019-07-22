@@ -36,6 +36,7 @@ class Cities extends Component {
         return (
             <div id="index">
                 {console.log(this.props)}
+
                 <div className="searchbar">
                     <i className="fas fa-search"></i>
                     <input className='form-control'
@@ -45,6 +46,7 @@ class Cities extends Component {
                         onChange={this.updateSearch.bind(this)}
                     />
                 </div>
+                
                 <ul>
                     {/* change cities.map into the new let filteredCities.map so we pass along the data to another variable */}
                     {filteredCities.map(({ name, img, _id }) => {
@@ -54,16 +56,6 @@ class Cities extends Component {
                             </Link>
                         )
                     })}
-
-                    {/* return (
-                <div id="index">
-                        {cityList}
-                    </div>
-                    )
-        } else {
-                        cityList = <p>Loading...</p>
-                    }} */}
-
                 </ul>
             </div>
         )
@@ -74,31 +66,3 @@ const mapStateToProps = state => ({
     cities: state.cities.cities
 })
 export default connect(mapStateToProps, { getCities })(Cities)
-
-//     render() {
-//         console.log(this.props);
-//         let cityList
-//         const { cities } = this.propsz
-//         if (cities) {
-//             cityList = cities.map(({ name, img, _id }) => {
-//                 return (
-//                     <Link to={`/itineraries/${name}`} key={_id}>
-//                         <CityCard name={name} img={img} />
-//                     </Link>
-//                 )
-//             })
-//             return (
-//                 <div className="container">
-//                     {cityList}
-//                 </div>
-//             )
-//         } else {
-//             cityList = <p>Loading...</p>
-//         }
-//     }
-// }
-
-// const mapStateToProps = state => ({
-//     cities: state.cities.cities
-// })
-// export default connect(mapStateToProps, { getCities })(Cities) 

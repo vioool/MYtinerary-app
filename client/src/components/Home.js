@@ -49,8 +49,8 @@ const Home = () => {
                     <NavLink to='/Login'>
                         <button className="prompt1">Login</button>
                     </NavLink>
-                    <NavLink to='/CreateAccount'>
-                        <button className="prompt2">Create Account</button>
+                    <NavLink to='/signup'>
+                        <button className="prompt2">Sign Up</button>
                     </NavLink>
                 </div>
             </div>

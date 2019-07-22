@@ -17,6 +17,8 @@ app.use(bodyParser.json());
 // initialize routes
 app.use('/cities', require('./routes/cities'));
 app.use('/itineraries', require('./routes/itineraries'));
+app.use('/users', require('./routes/users'));
+app.use('/auth', require('./routes/auth'));
 
 //error handling middleware
 app.use(function(err, req, res){

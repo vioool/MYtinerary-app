@@ -26,7 +26,7 @@ export default function (state = initialState, action) {
         cities: [payload, ...state.cities],
         loading: false
       }
-    //creates a case for DELETE_CIY which filters the cities array
+    //creates a case for DELETE_CITY which filters the cities array
     case DELETE_CITY:
       return {
         //spread the state and use a filter method on the cities array
