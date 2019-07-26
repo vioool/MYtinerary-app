@@ -5,8 +5,18 @@ import { connect } from 'react-redux'
 
 class Itineraries extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            city: window.location.pathname.split("/")[2]
+        }
+    }
+
     componentDidMount() {
-        const city = window.location.pathname.split("/")[2];
+        this.setState({
+            city: window.location.pathname.split("/")[2]
+        })
+        const city = this.state.city;
         this.props.getItineraries(city)
     }
 
@@ -15,11 +25,14 @@ class Itineraries extends Component {
         const { itineraries } = this.props
         return (
             <div id="index">
-                {itineraries.map(({ title, img }, index) => {
-                    return <ItineraryCard
-                        name={title}
-                        img={img}
-                        key={index} />
+                <h3>{this.state.city}</h3>
+                {itineraries.map(({ title, img, city }, index) => {
+                    return (
+                        <ItineraryCard
+                            name={title}
+                            img={img}
+                            key={index} />
+                    )
                 })}
             </div>
         )
@@ -29,4 +42,5 @@ class Itineraries extends Component {
 const mapStateToProps = state => ({
     itineraries: state.itineraries.itineraries
 })
-export default connect(mapStateToProps, { getItineraries })(Itineraries) 
+export default connect(mapStateToProps, { getItineraries })(Itineraries)
+

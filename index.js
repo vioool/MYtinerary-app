@@ -2,6 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const passportSetup = require('./configuration/passport-setup');
 
 //set up express app
 const app = express();
@@ -17,8 +18,8 @@ app.use(bodyParser.json());
 // initialize routes
 app.use('/cities', require('./routes/cities'));
 app.use('/itineraries', require('./routes/itineraries'));
-app.use('/users', require('./routes/users'));
-app.use('/auth', require('./routes/auth'));
+// app.use('/users', require('./routes/users'));
+app.use('/api/auth', require('./routes/auth'));
 
 //error handling middleware
 app.use(function(err, req, res){

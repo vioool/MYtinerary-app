@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import user_icon from '../../Images/user_icon.png';
 import menu_icon from '../../Images/menu_icon.png';
 import home_icon from '../../Images/homeIcon.png';
-
-const Google = () => {
+class Google extends Component {
+    render(){
     return (
         <div id="index">
             <div className="header">
@@ -17,8 +17,9 @@ const Google = () => {
         <footer>
             <img className="home_icon" src={home_icon} alt="home_icon" />
         </footer>
-        </div >
+        </div>
     )
+    }
 }
 
 export default Google

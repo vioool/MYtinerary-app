@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server":  "nodemon index.js",
+    "server": "nodemon index.js",
     "client": "npm start --prefix ./client",
     "start": "concurrently \"npm run server\" \"npm run client\""
-
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,8 @@
     "express-validator": "^6.1.1",
     "mongodb": "^3.2.7",
     "mongoose": "^5.6.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^2.0.0"
   }
 }

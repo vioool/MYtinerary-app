@@ -23,9 +23,9 @@ class Routing extends Component {
                 <Route path='/cities' component={Cities} />
                 <Route path='/itineraries' component={Itineraries} />
                 <Route path='/user' component={User} />
-                <Route path='/login' component={Login} />
-                <Route path='/google' component={Google} />
-                <Route path='/logout' component={Logout} />
+                <Route path='/auth/login' component={Login} />
+                <Route exact path='/auth/google/redirect' component={Google} />
+                <Route path='/auth/logout' component={Logout} />
                 <Route path='/createaccount' component={CreateAccount} />
                 <Route path='/mytinerary' component={MYtinerary} />
                 <Route exact path='/city-creator' component={CityCreator} />

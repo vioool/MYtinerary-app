@@ -46,7 +46,7 @@ const Home = () => {
             <div className="prompt">
                 <h4>Want to build your own MYtinerary?</h4>
                 <div className="prompt_buttons">
-                    <NavLink to='/Login'>
+                    <NavLink to='/auth/login'>
                         <button className="prompt1">Login</button>
                     </NavLink>
                     <NavLink to='/signup'>
