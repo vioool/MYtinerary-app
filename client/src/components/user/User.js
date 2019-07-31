@@ -13,18 +13,17 @@ class User extends Component {
         const { users } = this.props
         console.log(users);
         return (
-            
-        <div id="index">
-            {users.map(({ username, email, img, _id }) => {
-                return <UserCard
-                    key={_id}
-                    name={username}
-                    email={email}
-                    _id={_id}
-                    img={img}
-                />
-            })}
-        </div>
+            <div id="index">
+                {users.map(({ username, email, img, _id }) => {
+                    return <UserCard
+                        key={_id}
+                        name={username}
+                        email={email}
+                        _id={_id}
+                        img={img}
+                    />
+                })}
+            </div>
         )
     }
 }
