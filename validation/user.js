@@ -22,14 +22,7 @@ const userValidation = [
         .isEmpty()
         .withMessage('Password field can not be empty')
         .isLength({ min: 5 })
-        .withMessage('Password must contain at least 5 chars'),
-
-    check('passwordConfirmation')
-        .not()
-        .isEmpty()
-        .withMessage('Confirm your password')
-        // .equals('password')
-        // .withMessage("Passwords don't match")
+        .withMessage('Password must contain at least 5 chars')
 
 ]
 

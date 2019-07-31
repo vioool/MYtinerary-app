@@ -5,7 +5,7 @@ import { setError } from './errorActions'
 export const getUsers = () => async dispatch => {
     console.log('hello');
     try {
-        const res = await axios.get('/users');
+        const res = await axios.get('/api/auth/');
         dispatch({
             type: GET_USERS,
             payload: res.data
@@ -24,7 +24,7 @@ export const createUser = formData => async dispatch => {
     }
     try {
         //makes api call, creates a new user and adds it to the database
-        const res = await axios.post('/users/', formData, config)
+        const res = await axios.post('/api/auth/', formData, config)
         //verzenden naar de reducer
         dispatch({
             type: CREATE_USER,
@@ -50,7 +50,7 @@ export const deleteUser = _id => async dispatch => {
     console.log('jhjh')
     try {
         //makes api call and removes the user by id from the database
-        const res = await axios.delete('/users/'+_id);
+        const res = await axios.delete('/api/auth/'+_id);
             //verzenden naar de reducer
         dispatch({
             type: DELETE_USER,
@@ -64,7 +64,7 @@ export const deleteUser = _id => async dispatch => {
 export const getUser = _id => async dispatch => {
     console.log('hello');
     try {
-        const res = await axios.get('/users/'+_id);
+        const res = await axios.get('/api/auth/'+_id);
         dispatch({
             type: GET_USER,
             //the result of the data from the API call
