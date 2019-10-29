@@ -4,7 +4,7 @@ STATE OF THE PROJECT: • Working on the login page and functionality (with PASS
 • Work on ablilaty to generate new tokens and verify tokens
 • Next step:implement Update City
 
-TASK: Create a simple to use and intuitive interface for the app-manager of a travelsharing platform. 
+TASK: Create a simple to use and intuitive interface for the app-manager of a travel experience sharing platform. 
 The manager wants to be able to manipulate which data in the app will be fetched and presented. 
 
 PROCESS: • Writing predeﬁned operations and testing them in Postman
